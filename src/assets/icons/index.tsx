@@ -5,30 +5,23 @@ export type IconComponentPropsType = React.SVGProps<SVGSVGElement> & {
   size: string | number;
 };
 
-export type IconType = 'github' | 'facebook' | 'linkedin';
+export type IconType = 'arrow' | 'linkedin' | 'mail';
 
 const icons = {
-  github: dynamic(() => import(`@assets/icons/Github`)),
-  facebook: dynamic(() => import(`@assets/icons/Facebook`)),
+  arrow: dynamic(() => import(`@assets/icons/Arrow`)),
+  mail: dynamic(() => import(`@assets/icons/Mail`)),
   linkedin: dynamic(() => import(`@assets/icons/Linkedin`)),
 };
 
 interface PropsInterface {
   name: IconType;
-  color?: string;
-  size?: string | number;
 }
-const Icon = ({
-  name,
-  color = '#9D0191',
-  size = 24,
-  ...rest
-}: PropsInterface): JSX.Element => {
+const Icon = ({ name }: PropsInterface): JSX.Element => {
   const IconComponent = icons[name];
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
-  return <IconComponent color={color} size={size} className="" {...rest} />;
+  return <IconComponent />;
 };
 
 export default Icon;

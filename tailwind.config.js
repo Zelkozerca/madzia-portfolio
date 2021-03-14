@@ -1,19 +1,23 @@
 module.exports = {
   purge: ['./components/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false,
   theme: {
+    colors: {
+      gray: '#232323',
+      yellow: '#FCB242',
+      bgYellow: 'rgba(252, 178, 66, 0.85)',
+      white: '#FFFFFF',
+      black: '#000000',
+    },
     screens: {
       'xs': '640px',
       'sm': '800px',
       'md': '960px',
-      'lg': '1280px',
-      'xl': '1600px',
-      '2xl': '1980px',
+      'lg': '1200px',
     },
-
     extend: {
       fontFamily: {
-        montserrat: ['Montserrat', 'DejaVu Sans', 'Verdana', 'sans‑serif'],
+        poppins: ['Poppins', 'DejaVu Sans', 'Verdana', 'sans‑serif'],
       },
       width: {
         half: '50%',
@@ -24,7 +28,6 @@ module.exports = {
       },
       height: {
         full: '100%',
-        '70': '70vh',
         viewport: '100vh',
         screen: 'calc(var(--vh) * 100)',
       },

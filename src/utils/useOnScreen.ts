@@ -1,13 +1,7 @@
-import {
-  useState,
-  useEffect,
-  useRef,
-  useCallback,
-  MutableRefObject,
-} from 'react';
+import { useState, useEffect, useRef, useCallback, RefObject } from 'react';
 
 interface Args<T> extends IntersectionObserverInit {
-  elementRef: MutableRefObject<T>;
+  elementRef: RefObject<T>;
   repeatable?: boolean;
 }
 

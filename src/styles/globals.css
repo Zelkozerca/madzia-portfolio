@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer components {
-    .responsive {
-        @apply px-6 px-6 sm:px-8 md:px-10 lg:px-20 xl:px-20 max-w-screen-xl mx-auto
+    body {
+        @apply bg-gray text-white font-poppins selection:bg-yellow
     }
 }
