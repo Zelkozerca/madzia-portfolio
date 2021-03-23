@@ -1,12 +1,34 @@
 import { FC, useState } from 'react';
 import { Link } from 'react-scroll';
+import useEventListener from '@utils/useEventListener';
 
 const Navbar: FC = () => {
   const [isOpen, setOpen] = useState(false);
+  const [isVisible, setVisible] = useState(false);
+
+  useEventListener(
+    'scroll',
+    () => {
+      const shouldAppear = window.scrollY > 0;
+      setVisible(shouldAppear);
+    },
+    {
+      passive: true,
+      capture: false,
+    },
+  );
+
+  // if (!isVisible) {
+  //   return null;
+  // }
 
   return (
     <>
-      <nav className="fixed z-10 top-0 left-0 bg-gray w-full py-2 md:py-4">
+      <nav
+        className={`fixed z-10 top-0 left-0 bg-gray w-full py-2 md:py-4 transition-opacity ${
+          isVisible ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
         <div className="px-6 sm:px-8 w-full md:px-10 w-full max-w-screen-lg mx-auto flex items-center justify-between">
           <Link
             className="font-bold"
