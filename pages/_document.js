@@ -11,7 +11,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <title>Create Next App</title>
+          <title>My portfolio</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <body>
