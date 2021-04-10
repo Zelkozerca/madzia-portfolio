@@ -4,7 +4,7 @@ import { hobbies } from '@config';
 
 const Hobby: FC = () => {
   return (
-    <div className="flex flex-col text-center">
+    <div className="flex flex-col text-center sm:pb-12 sm:pt-6 pt-0 pb-6">
       <h2 className="text-xl md:text-2xl lg:text-3xl text-white">Hobby</h2>
       <div className="w-full flex flex-wrap items-center justify-center py-8 md:py-16">
         {hobbies.map(hobby => (

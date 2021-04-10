@@ -2,7 +2,7 @@ import type { AppProps } from 'next/app';
 import { useEffect, ReactNode } from 'react';
 import LoadFonts from '@styles/LoadFonts';
 
-import '@styles/globals.css';
+import '@styles/tailwind.css';
 
 const MyApp = ({ Component, pageProps }: AppProps): ReactNode => {
   useEffect(() => {

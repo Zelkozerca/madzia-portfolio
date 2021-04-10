@@ -11,7 +11,7 @@ const About: FC = () => {
   const { x, y } = useAnimateBackground(imageRef, { dx: 20, dy: 20 });
 
   return (
-    <div className="w-full flex-grow flex flex-col md:flex-row items-center justify-center min-h-viewport my-12 relative">
+    <div className="w-full flex-grow flex flex-col md:flex-row items-center justify-center sm:pt-16 md:pt-24 pt-8 my-12 relative">
       <div className="w-full sm:w-half">
         <div
           className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-96 md:h-96 mx-auto"
